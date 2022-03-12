@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
 import 'add_memo.dart';
+import 'memo.dart';
+
+class MyMemo with ChangeNotifier {
+  List<Memo> memos;
+
+  Mymemo() {
+    memos = List();
+  }
+
+  void addMemo(Memo memo) {
+    this.memos.add(memo);
+    notifyListeners();
+  }
+}
 
 void main() => runApp(MyApp());
 
@@ -25,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SizedBox.expand(),
       floatingActionButton: FloatingActionButton(
-         onPressed: () {
+        onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
