@@ -69,7 +69,7 @@ class MyhomePage extends StatelessWidget {
                     return Container(
                         color: Colors.amber[colorCodes[index]],
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
